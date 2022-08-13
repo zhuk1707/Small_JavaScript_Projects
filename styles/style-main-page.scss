@@ -1,0 +1,90 @@
+@import "../colors/colors-main-page";
+@import "../fonts/fonts-main-page";
+
+@import "_reset";
+
+body {
+  background: $background;
+}
+
+.wrapper {
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.main {
+  &__inner {
+  }
+
+  &__title {
+    padding-top: 80px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+  }
+
+  &__cards {
+    margin-top: 40px;
+  }
+}
+
+.cards-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+
+
+  &__item {
+    width: 31%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 40px;
+
+  }
+
+  &__image {
+    display: block;
+    position: relative;
+    padding: 0 0 50% 0;
+    overflow: hidden;
+    border-radius: 20px;
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    & img {
+      transition: .3s ease;
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      border-radius: 20px;
+
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0 10px;
+    color: inherit;
+
+    transition: .3s ease;
+    &:hover {
+      color: #444444;
+    }
+  }
+
+  &__subtitle {
+  }
+}
