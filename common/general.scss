@@ -1,0 +1,18 @@
+@import "colors/colors-main-page";
+@import "fonts/fonts-main-page";
+
+@import "reset";
+
+body {
+  background: $background;
+}
+
+.wrapper {
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
