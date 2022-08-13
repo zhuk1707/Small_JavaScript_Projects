@@ -1,0 +1,45 @@
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__title {
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+}
+.main__counter {
+  margin-top: 20px;
+}
+
+.counter {
+  background-color: white;
+  border-radius: 30px;
+  padding: 30px;
+}
+.counter__output {
+  text-align: center;
+  font-size: 72px;
+}
+.counter__buttons {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.counter__btn {
+  color: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 8px 16px;
+  transition: 0.3s ease;
+}
+.counter__btn:hover {
+  color: white;
+  background-color: black;
+}
+
+/*# sourceMappingURL=counter.css.map */
