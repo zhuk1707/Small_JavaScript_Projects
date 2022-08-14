@@ -26,6 +26,13 @@ const reviews = [
     job: 'project manager',
     image: '../images/reviews/04.jpg',
     text: 'Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. '
+  },
+  {
+    id: 5,
+    name: 'Debra Morgan',
+    job: 'Recruiter',
+    image: '../images/reviews/05.jpg',
+    text: 'Sed vel illum dolore eu feugiat nulla facilisis at vero eros.'
   }
 ]
 
@@ -37,7 +44,7 @@ const reviewText = document.querySelector('.reviews__item')
 const arrows = document.querySelector('.reviews__arrows')
 const randomBtn = document.querySelector('.reviews__btn')
 
-let currentItem = 0
+let currentItem = 4
 
 window.addEventListener("DOMContentLoaded", function () {
   showPerson(currentItem)

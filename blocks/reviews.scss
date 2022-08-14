@@ -1,10 +1,14 @@
+.main__title {
+  margin-top: 40px;
+}
+
 .reviews {
   background-color: white;
   padding: 30px;
   border-radius: 30px;
-  margin: 0 auto;
-  width: 50%;
+  margin: 0 0 40px;
   display: flex;
+  flex: 100%;
   flex-direction: column;
   justify-content: center;
   text-align: center;
