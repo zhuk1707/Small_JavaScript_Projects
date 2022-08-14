@@ -10,11 +10,10 @@
 .cards-block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 30px;
+  gap: 30px;
 }
 .cards-block__item {
-  width: 31%;
+  flex: 1 0 31%;
   padding: 20px;
   background-color: white;
   border-radius: 40px;
