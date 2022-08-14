@@ -1,0 +1,14 @@
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__title {
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=common.css.map */
