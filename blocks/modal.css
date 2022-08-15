@@ -1,0 +1,67 @@
+.lock {
+  overflow: hidden;
+}
+
+.main {
+  margin-top: 60px;
+}
+.main__modal-btn {
+  margin: 10px 0;
+  font-size: inherit;
+  padding: 8px 16px;
+  color: orangered;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 1px solid orangered;
+  transition: all 0.3s ease;
+}
+.main__modal-btn:hover {
+  color: white;
+  background-color: orangered;
+}
+
+.modal-overlay.active {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(33, 33, 33, 0.3137254902);
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  z-index: -10;
+}
+.modal-overlay__modal-container {
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 40px;
+  width: 80vw;
+  height: 30vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.modal-container__btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: orangered;
+  font-size: 26px;
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.modal-container__btn:hover {
+  background-color: rgba(255, 69, 0, 0.25);
+}
+
+/*# sourceMappingURL=modal.css.map */
