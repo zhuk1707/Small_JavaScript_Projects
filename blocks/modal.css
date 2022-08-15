@@ -21,6 +21,7 @@
 }
 
 .modal-overlay.active {
+  opacity: 1;
   visibility: visible;
   z-index: 10;
 }
@@ -36,7 +37,9 @@
   display: grid;
   place-items: center;
   visibility: hidden;
+  opacity: 0;
   z-index: -10;
+  transition: 0.5s ease;
 }
 .modal-overlay__modal-container {
   border-radius: 30px;

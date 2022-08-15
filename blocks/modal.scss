@@ -22,6 +22,7 @@
 }
 
 .modal-overlay.active {
+  opacity: 1;
   visibility: visible;
   z-index: 10;
 }
@@ -37,7 +38,10 @@
   display: grid;
   place-items: center;
   visibility: hidden;
+  opacity: 0;
   z-index: -10;
+  transition: .5s ease;
+
 
   &__modal-container {
     border-radius: 30px;
@@ -54,9 +58,6 @@
 
 
 .modal-container {
-  &__text {
-  }
-
   &__btn {
     position: absolute;
     right: 10px;
