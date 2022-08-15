@@ -1,0 +1,109 @@
+.main__title {
+  margin: 40px 0;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+}
+
+h1,h2,p {
+  margin: 20px 0;
+}
+
+p {
+  text-align: justify;
+}
+
+.header {
+  &__btn {
+    font-size: 30px;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 69, 0, 0.25);
+    backdrop-filter: blur(3px);
+    color: orangered;
+
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+
+    transition: .3s ease;
+    &:hover {
+      background-color: orangered;
+      color: white;
+    }
+  }
+}
+
+.main {
+  &__sidebar {
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -30%;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  padding: 20px 20px 20px 0;
+
+  &.active {
+    left: 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-left: 30px;
+    font-size: 32px;
+    font-weight: 600;
+    color: orangered;
+
+  }
+
+  &__close-btn {
+    font-size: 32px;
+    color: inherit;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+
+    transition: .3s ease;
+    &:hover {
+      background-color: rgba(255, 69, 0, 0.25);
+      color: orangered;
+    }
+  }
+
+  &__body {
+    margin-top: 60px;
+  }
+
+  &__links {
+    font-size: 26px;
+    color: inherit;
+  }
+
+  &__link {
+    display: block;
+    color: inherit;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 30px;
+
+    transition: .3s ease;
+    &:hover {
+      background-color: rgba(255, 69, 0, 0.25);
+      color: orangered;
+    }
+  }
+}
+

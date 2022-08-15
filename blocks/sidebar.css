@@ -1,0 +1,91 @@
+.main__title {
+  margin: 40px 0;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+}
+
+h1, h2, p {
+  margin: 20px 0;
+}
+
+p {
+  text-align: justify;
+}
+
+.header__btn {
+  font-size: 30px;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 69, 0, 0.25);
+  backdrop-filter: blur(3px);
+  color: orangered;
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  transition: 0.3s ease;
+}
+.header__btn:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -30%;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  padding: 20px 20px 20px 0;
+}
+.sidebar.active {
+  left: 0;
+}
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar__logo {
+  margin-left: 30px;
+  font-size: 32px;
+  font-weight: 600;
+  color: orangered;
+}
+.sidebar__close-btn {
+  font-size: 32px;
+  color: inherit;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+.sidebar__close-btn:hover {
+  background-color: rgba(255, 69, 0, 0.25);
+  color: orangered;
+}
+.sidebar__body {
+  margin-top: 60px;
+}
+.sidebar__links {
+  font-size: 26px;
+  color: inherit;
+}
+.sidebar__link {
+  display: block;
+  color: inherit;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+.sidebar__link:hover {
+  background-color: rgba(255, 69, 0, 0.25);
+  color: orangered;
+}
+
+/*# sourceMappingURL=sidebar.css.map */
