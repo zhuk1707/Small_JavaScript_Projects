@@ -43,14 +43,25 @@ p {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -30%;
+  left: 0;
   width: 30%;
   height: 100%;
   background-color: white;
   padding: 20px 20px 20px 0;
+  transform: translate(-100%);
+  transition: .2s ease;
 
   &.active {
-    left: 0;
+    transform: translate(0);
+  }
+
+  @keyframes open {
+    0% {
+      left: -30%;
+    }
+    100% {
+      left: 0;
+    }
   }
 
   &__header {
