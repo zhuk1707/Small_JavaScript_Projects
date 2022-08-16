@@ -1,0 +1,129 @@
+.page-title {
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  margin: 60px 0 40px;
+}
+
+.main {
+  &__menu {
+  }
+}
+
+.menu {
+  display: grid;
+  place-items: center;
+
+  &__filter {
+    margin-bottom: 30px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  &__item {
+  }
+  margin-bottom: 40px;
+}
+
+.filter {
+  &__buttons {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__btn {
+    font-size: 18px;
+    background-color: transparent;
+    color: orangered;
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: 1px solid orangered;
+
+    transition: .3s ease;
+    &:hover {
+      background-color: orangered;
+      color: white;
+    }
+  }
+}
+
+.item-menu {
+  display: flex;
+  gap: 10px;
+  min-height: 150px;
+  min-width: 550px;
+
+  &__image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    padding:  0 0 0 40%; //!
+
+    &:hover img {
+      transform: scale(1.2);
+    }
+
+    & img {
+      border-radius: 10px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+
+      transition: .3s ease;
+    }
+  }
+
+  &__info {
+    width: 100%;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted orangered;
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    text-transform: capitalize;
+  }
+
+  &__cost {
+  }
+
+  &__desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
+    }
+  }
+
+  .item-menu {
+    flex-direction: column;
+
+    &__image {
+      padding:  0 0 50% 0;
+    }
+
+    &__info {
+
+    }
+  }
+
+}
