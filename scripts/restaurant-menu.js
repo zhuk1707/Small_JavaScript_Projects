@@ -9,7 +9,7 @@ const restaurantMenu = [
   },
   {
     id: 2,
-    title: "diner double",
+    name: "diner double",
     category: "lunch",
     cost: 13.99,
     image: '../images/restaurant-menu/item-2.jpeg',
@@ -17,15 +17,15 @@ const restaurantMenu = [
   },
   {
     id: 3,
-    title: "godzilla milkshake",
+    name: "godzilla milkshake",
     category: "shakes",
     cost: 6.99,
     image: '../images/restaurant-menu/item-3.jpeg',
-    desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
+    desc: `Ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
   },
   {
     id: 4,
-    title: "country delight",
+    name: "country delight",
     category: "breakfast",
     cost: 20.99,
     image: '../images/restaurant-menu/item-4.jpeg',
@@ -33,15 +33,15 @@ const restaurantMenu = [
   },
   {
     id: 5,
-    title: "egg attack",
+    name: "egg attack",
     category: "lunch",
     cost: 22.99,
     image: '../images/restaurant-menu/item-5.jpeg',
-    desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
+    desc: `Franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
   },
   {
     id: 6,
-    title: "oreo dream",
+    name: "oreo dream",
     category: "shakes",
     cost: 18.99,
     image: '../images/restaurant-menu/item-6.jpeg',
@@ -49,26 +49,114 @@ const restaurantMenu = [
   },
   {
     id: 7,
-    title: "bacon overflow",
+    name: "bacon overflow",
     category: "breakfast",
     cost: 8.99,
     image: '../images/restaurant-menu/item-7.jpeg',
-    desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
+    desc: `Carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
   },
   {
     id: 8,
-    title: "american classic",
+    name: "american classic",
     category: "lunch",
     cost: 12.99,
     image: '../images/restaurant-menu/item-8.jpeg',
-    desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
+    desc: `On it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
   },
   {
     id: 9,
-    title: "quarantine buddy",
+    name: "quarantine buddy",
     category: "shakes",
     cost: 16.99,
-    image: '../images/restaurant-menu/item-9.jpeg',
-    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    image: '../images/restaurant-menu/item-9.jpg',
+    desc: `Skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
+  {
+    id: 10,
+    name: "Steak Dinner",
+    category: "dinner",
+    cost: 34.99,
+    image: '../images/restaurant-menu/item-10.jpeg',
+    desc: `Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   }
 ]
+
+const menuItems = document.querySelector('.menu__items')
+const filterButtons = document.querySelector('.filter__buttons')
+
+function displayMenuItem(menuItem) {
+  let displayedMenu = menuItem.map( (item) => {
+    return `<div class="menu__item item-menu">
+                        <div class="item-menu__image">
+                            <img src="${item.image}" alt="${item.name}">
+                        </div>
+                        <div class="item-menu__info">
+                            <div class="item-menu__head">
+                                <div class="item-menu__name">${item.name}</div>
+                                <div class="item-menu__cost">$${item.cost}</div>
+                            </div>
+                            <div class="item-menu__desc">${item.desc}</div>
+                        </div>
+                    </div>`
+  })
+
+  displayedMenu = displayedMenu.join('')
+  menuItems.innerHTML = displayedMenu
+}
+
+function displayFilterButtons() {
+  const categories = restaurantMenu.reduce( (values, item) => {
+    if (!values.includes(item.category)) {
+      values.push(item.category)
+    }
+    return values
+  }, ['all'])
+
+  let categoryButtons = categories.map((category) => {
+    return `<button class="filter__btn" type="button"
+                data-id="${category}">${category}
+            </button>`
+  })
+
+  categoryButtons = categoryButtons.join('')
+  filterButtons.innerHTML = categoryButtons
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  displayMenuItem(restaurantMenu)
+  
+  displayFilterButtons()
+})
+
+filterButtons.addEventListener('click', (e) => {
+  if (e.target.closest('.filter__btn')) {
+    const currentCategory = e.target.dataset.id
+
+    const filteredMenu = restaurantMenu.filter( menuItem => {
+      if (menuItem.category === currentCategory) {
+        return menuItem
+      }
+    })
+
+    if (currentCategory === 'all') {
+      displayMenuItem(restaurantMenu)
+    } else {
+      displayMenuItem(filteredMenu)
+    }
+    
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -31,11 +31,14 @@
 .filter {
   &__buttons {
     display: flex;
-    column-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
   &__btn {
-    font-size: 18px;
+    text-transform: capitalize;
+    font-size: .9rem;
     background-color: transparent;
     color: orangered;
     padding: 8px 16px;
@@ -54,7 +57,7 @@
   display: flex;
   gap: 10px;
   min-height: 150px;
-  min-width: 550px;
+  min-width: 500px;
 
   &__image {
     position: relative;
@@ -98,6 +101,7 @@
   }
 
   &__cost {
+    font-style: italic;
   }
 
   &__desc {
@@ -116,6 +120,9 @@
 
   .item-menu {
     flex-direction: column;
+    min-height: 30px;
+    min-width: 100px;
+    //padding-right: 15px;
 
     &__image {
       padding:  0 0 50% 0;

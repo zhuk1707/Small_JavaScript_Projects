@@ -19,10 +19,13 @@
 }
 .filter__buttons {
   display: flex;
-  column-gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 .filter__btn {
-  font-size: 18px;
+  text-transform: capitalize;
+  font-size: 0.9rem;
   background-color: transparent;
   color: orangered;
   padding: 8px 16px;
@@ -39,7 +42,7 @@
   display: flex;
   gap: 10px;
   min-height: 150px;
-  min-width: 550px;
+  min-width: 500px;
 }
 .item-menu__image {
   position: relative;
@@ -75,6 +78,9 @@
 .item-menu__name {
   text-transform: capitalize;
 }
+.item-menu__cost {
+  font-style: italic;
+}
 .item-menu__desc {
   font-size: 14px;
 }
@@ -87,6 +93,8 @@
   }
   .item-menu {
     flex-direction: column;
+    min-height: 30px;
+    min-width: 100px;
   }
   .item-menu__image {
     padding: 0 0 50% 0;
