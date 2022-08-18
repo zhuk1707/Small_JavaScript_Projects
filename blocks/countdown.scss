@@ -3,32 +3,35 @@
   display: grid;
   place-items: center;
 
-  &__inner {
-  }
-
   &__title {
     margin-bottom: 30px;
-  }
-
-  &__counter {
   }
 }
 
 .countdown {
   padding: 60px;
   &__title {
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
+    text-align: center;
+    padding: 20px 30px;
     margin-bottom: 40px;
+    border-radius: 10px;
+    background: white;
     box-shadow: -11px -11px 20px rgba(255, 255, 255, 0.272044), -8px -40px 22px rgba(246, 251, 255, 0.384288), -8px 0px 8px rgba(244, 248, 251, 0.50254), 19px 21px 50px rgba(176, 195, 210, 0.727846);
-
   }
 
   &__deadline {
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
+  }
+
+  &__over {
+    padding: 20px 30px;
+    border-radius: 15px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    box-shadow: -11px -11px 20px rgba(255, 255, 255, 0.272044), -8px -40px 22px rgba(246, 251, 255, 0.384288), -8px 0px 8px rgba(244, 248, 251, 0.50254), 19px 21px 50px rgba(176, 195, 210, 0.727846);
   }
 
   &__format {
@@ -42,11 +45,4 @@
     text-align: center;
     box-shadow: -11px -11px 20px rgba(255, 255, 255, 0.272044), -8px -40px 22px rgba(246, 251, 255, 0.384288), -8px 0px 8px rgba(244, 248, 251, 0.50254), 19px 21px 50px rgba(176, 195, 210, 0.727846);
   }
-
-  &__num {
-  }
-
-  &__time-unit {
-  }
-
 }
