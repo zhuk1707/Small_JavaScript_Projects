@@ -1,0 +1,50 @@
+.main {
+  &__title {
+    margin: 30px 0 20px;
+  }
+
+  &__generator {
+  }
+}
+.generator {
+  display: flex;
+  justify-content: center;
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    & input {
+      width: 25%;
+      padding: 8px 16px;
+      border-radius: 30px;
+      border: 1px solid orangered;
+      font-size: inherit;
+    }
+
+    & button {
+      font-size: inherit;
+      padding: 8px 16px;
+      color: orangered;
+      background-color: transparent;
+      border-radius: 30px;
+      border: 1px solid orangered;
+
+      transition: all .3s ease;
+      &:hover {
+        color: white;
+        background-color: orangered;
+      }
+
+    }
+  }
+
+  &__generated-text {
+    margin-top: 60px;
+  }
+}
+
+.generated-text {
+  padding: 30px;
+
+}
