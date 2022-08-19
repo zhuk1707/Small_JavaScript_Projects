@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../common/general.css">
+    <link rel="stylesheet" href="../blocks/to-do-list.css">
+</head>
+<body>
+<div class="wrapper">
+    <main class="main">
+        <div class="container">
+            <h1 class="main__title">To Do List</h1>
+            <div class="main__to-do to-do">
+                <form class="to-do__form">
+                    <input type="text" class="to-do__input"
+                           placeholder="Write here...">
+                    <button class="to-do__submit-button" type="submit">Add
+                    </button>
+                </form>
+                <div class="to-do__list">
+                    <div class="to-do__item">
+                        <div class="to-do__text">text</div>
+                        <div class="to-do__buttons">
+                            <button type="button" class="to-do__button_accept">
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                            <button type="button" class="to-do__button_edit">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <button type="button" class="to-do__button_delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="to-do__list">
+                    <div class="to-do__item">
+                        <div class="to-do__text">text</div>
+                        <div class="to-do__buttons">
+                            <button type="button" class="to-do__button_accept">
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                            <button type="button" class="to-do__button_edit">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <button type="button" class="to-do__button_delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="https://kit.fontawesome.com/b8e2be2715.js" crossorigin="anonymous"></script>
+<script src="../scripts/to-do-list.js"></script>
+</body>
+</html>
