@@ -1,6 +1,10 @@
 .main__title {
   margin: 30px 0 20px;
 }
+.main__generated-text {
+  margin-top: 30px;
+}
+
 .generator {
   display: flex;
   justify-content: center;
@@ -30,12 +34,14 @@
   color: white;
   background-color: orangered;
 }
-.generator__generated-text {
-  margin-top: 60px;
-}
 
 .generated-text {
   padding: 30px;
+  border-radius: 30px;
+  background-color: white;
+}
+.generated-text p:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=lorem-ipsum.css.map */

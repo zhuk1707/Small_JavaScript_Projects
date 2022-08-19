@@ -5,6 +5,10 @@
 
   &__generator {
   }
+
+  &__generated-text {
+    margin-top: 30px;
+  }
 }
 .generator {
   display: flex;
@@ -38,13 +42,14 @@
 
     }
   }
-
-  &__generated-text {
-    margin-top: 60px;
-  }
 }
 
 .generated-text {
   padding: 30px;
+  border-radius: 30px;
+  background-color: white;
 
+  & p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }
