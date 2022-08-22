@@ -14,7 +14,6 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  margin-bottom: 20px;
 }
 .to-do__input {
   font-size: inherit;
@@ -37,9 +36,6 @@
   background-color: black;
   color: white;
 }
-.to-do__list:not(:last-child) {
-  margin-bottom: 10px;
-}
 .to-do__item {
   display: flex;
   justify-content: space-between;
@@ -48,15 +44,26 @@
   padding: 10px 20px;
   border-radius: 15px;
 }
+.to-do__item:first-child {
+  margin-top: 20px;
+}
+.to-do__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.to-do__item.completed .to-do__text {
+  text-decoration: line-through;
+  color: #b6b6b6;
+}
 .to-do__text {
   margin-right: 5px;
+  padding-top: 3px;
 }
 .to-do__buttons {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.to-do__button_accept {
+.to-do__button_complete {
   background-color: transparent;
   font-size: 18px;
   color: #626262;
@@ -65,7 +72,7 @@
   border-radius: 30px;
   transition: 0.3s ease;
 }
-.to-do__button_accept:hover {
+.to-do__button_complete:hover {
   color: #29ff29;
   background-color: rgba(41, 255, 41, 0.2);
 }
@@ -79,8 +86,8 @@
   transition: 0.3s ease;
 }
 .to-do__button_edit:hover {
-  color: #80acff;
-  background-color: rgba(128, 172, 255, 0.2);
+  color: #2474ff;
+  background-color: rgba(36, 116, 255, 0.2);
 }
 .to-do__button_delete {
   background-color: transparent;
