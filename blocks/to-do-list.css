@@ -57,6 +57,7 @@
 .to-do__text {
   margin-right: 5px;
   padding-top: 3px;
+  overflow: clip;
 }
 .to-do__buttons {
   display: flex;

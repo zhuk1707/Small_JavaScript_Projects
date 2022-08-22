@@ -59,6 +59,10 @@ form.addEventListener('submit', (e) => {
 
   createAndAppendButtons([listItem])
   list.appendChild(listItem)
-  document.querySelector('.to-do__input').value = ''
+
+  const taskInput = document.querySelector('.to-do__input')
+
+  taskInput.value = ''
+  taskInput.focus()
 })
 
