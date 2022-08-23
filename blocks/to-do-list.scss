@@ -6,8 +6,8 @@
   background-color: transparent;
   font-size: 18px;
   color: #626262;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 30px;
 
   @include transition;
@@ -63,7 +63,8 @@
   &__item {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    gap: 10px;
     background-color: rgba(175, 175, 175, 0.1);
     padding: 10px 20px;
     border-radius: 15px;
@@ -83,9 +84,15 @@
   }
 
   &__text {
-    margin-right: 5px;
-    padding-top: 3px;
-    overflow: clip;
+    font-size: inherit;
+    background-color: transparent;
+    padding: 10px 0;
+    text-overflow: ellipsis;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   /**/
@@ -97,6 +104,8 @@
 
   /**/
   &__button {
+    pointer-events: none;
+
     &_complete {
       @include icon-button;
       &:hover {

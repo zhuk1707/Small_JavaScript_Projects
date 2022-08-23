@@ -39,7 +39,8 @@
 .to-do__item {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  gap: 10px;
   background-color: rgba(175, 175, 175, 0.1);
   padding: 10px 20px;
   border-radius: 15px;
@@ -55,21 +56,29 @@
   color: #b6b6b6;
 }
 .to-do__text {
-  margin-right: 5px;
-  padding-top: 3px;
-  overflow: clip;
+  font-size: inherit;
+  background-color: transparent;
+  padding: 10px 0;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.to-do__text:focus {
+  outline: none;
 }
 .to-do__buttons {
   display: flex;
   align-items: center;
   gap: 15px;
 }
+.to-do__button {
+  pointer-events: none;
+}
 .to-do__button_complete {
   background-color: transparent;
   font-size: 18px;
   color: #626262;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 30px;
   transition: 0.3s ease;
 }
@@ -81,8 +90,8 @@
   background-color: transparent;
   font-size: 18px;
   color: #626262;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 30px;
   transition: 0.3s ease;
 }
@@ -94,8 +103,8 @@
   background-color: transparent;
   font-size: 18px;
   color: #626262;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 30px;
   transition: 0.3s ease;
 }
