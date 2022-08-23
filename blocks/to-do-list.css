@@ -63,7 +63,7 @@
   width: 100%;
 }
 .to-do__text:focus {
-  outline: none;
+  outline: transparent;
 }
 .to-do__buttons {
   display: flex;
@@ -85,19 +85,6 @@
 .to-do__button_complete:hover {
   color: #29ff29;
   background-color: rgba(41, 255, 41, 0.2);
-}
-.to-do__button_edit {
-  background-color: transparent;
-  font-size: 18px;
-  color: #626262;
-  width: 35px;
-  height: 35px;
-  border-radius: 30px;
-  transition: 0.3s ease;
-}
-.to-do__button_edit:hover {
-  color: #2474ff;
-  background-color: rgba(36, 116, 255, 0.2);
 }
 .to-do__button_delete {
   background-color: transparent;

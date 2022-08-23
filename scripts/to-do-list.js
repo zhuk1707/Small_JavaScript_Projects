@@ -4,14 +4,16 @@ const taskList = document.querySelector('.to-do__list')
 
 let tasks = []
 
+if (localStorage.getItem('tasks')) {
+  tasks = JSON.parse(localStorage.getItem('tasks'))
+  tasks.forEach(el => renderTasks(el))
+}
+
 form.addEventListener('submit', addTask)
 
 taskList.addEventListener('click', deleteTask)
 
 taskList.addEventListener('click', markTaskAsCompleted)
-
-// taskList.addEventListener('click', editTask)
-
 
 //functions
 function addTask(e) {
@@ -27,26 +29,9 @@ function addTask(e) {
   
   tasks.push(newTask)
 
-  const cssClass = newTask.isCompleted? "to-do__item completed" : 'to-do__item'
-  const taskHTML = `<li class="${cssClass}" id="${newTask.id}">
-                        <input class="to-do__text"
-                               value='${newTask.text}'
-                               readonly required>
-                        <div class="to-do__buttons">
-                            <button type="button"
-                                    class="to-do__button_complete">
-                                <i class="fa-solid fa-check"></i>
-                            </button>
-                            <button type="button" class="to-do__button_edit">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                            </button>
-                            <button type="button" class="to-do__button_delete">
-                                <i class="fa-regular fa-trash-can"></i>
-                            </button>
-                        </div>
-                    </li>`
+  saveToLocalStorage()
 
-  taskList.insertAdjacentHTML('beforeend', taskHTML)
+  renderTasks(newTask)
 
   taskInput.value = ''
   taskInput.focus()
@@ -61,6 +46,7 @@ function deleteTask(e) {
     tasks.splice(index, 1)
 
     parentNode.remove()
+    saveToLocalStorage()
   }
 }
 
@@ -71,17 +57,31 @@ function markTaskAsCompleted(e) {
     const task = tasks.find(task => task.id === parentId)
 
     task.isCompleted = !task.isCompleted
-    
+    saveToLocalStorage()
     parentNode.classList.toggle('completed')
   }
 }
 
-// function editTask(e) {
-//   if (e.target.closest('.to-do__button_edit')) {
-//     const parentNode = e.target.closest('.to-do__item')
-//     const input = parentNode.querySelector('input')
-//
-//     input.toggleAttribute( 'readonly')
-//     input.focus()
-//   }
-// }
+function saveToLocalStorage() {
+  localStorage.setItem('tasks', JSON.stringify(tasks))
+}
+
+function renderTasks(el) {
+  const cssClass = el.isCompleted? "to-do__item completed" : 'to-do__item'
+  const taskHTML = `<li class="${cssClass}" id="${el.id}">
+                        <input class="to-do__text"
+                               value='${el.text}'
+                               readonly required>
+                        <div class="to-do__buttons">
+                            <button type="button"
+                                    class="to-do__button_complete">
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                            <button type="button" class="to-do__button_delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </li>`
+
+  taskList.insertAdjacentHTML('beforeend', taskHTML)
+}

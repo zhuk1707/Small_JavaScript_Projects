@@ -91,7 +91,7 @@
     width: 100%;
 
     &:focus {
-      outline: none;
+      outline: transparent;
     }
   }
 
@@ -111,14 +111,6 @@
       &:hover {
         color: #29ff29;
         background-color: rgba(41, 255, 41, 0.2);
-      }
-    }
-
-    &_edit {
-      @include icon-button;
-      &:hover {
-        color: #2474ff;
-        background-color: rgba(36, 116, 255, 0.2);
       }
     }
 
