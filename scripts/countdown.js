@@ -26,9 +26,8 @@ const weekdays = [
 const endDateSpan = document.querySelector('.countdown__title span')
 const deadline = document.querySelector('.countdown__deadline')
 const items = document.querySelectorAll('.countdown__format h1')
-console.log(items)
 
-let futureDate = new Date(2022,11,21, 21, 21,21);
+let futureDate = new Date(2023,11,21, 21, 21,21);
 const year = futureDate.getFullYear()
 const hours = futureDate.getHours()
 const minutes = futureDate.getMinutes()
